@@ -1,0 +1,437 @@
+/* ─── Reset ─── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ─── Page wrapper ─── */
+.container {
+    width: 100%;
+    height: 100dvh;
+}
+
+/* ─── Fixed header ─── */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* shaffof bo'lishi shart! */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(3px);
+    /* Safari uchun */
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ─── Nav: logo | links | btn ─── */
+.main-header nav {
+    width: 97%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ─── Logo ─── */
+.main-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/* ─── Nav links ─── */
+.main-list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    list-style: none;
+}
+
+.main-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: opacity 0.2s;
+}
+
+.main-list a:hover {
+    opacity: 0.6;
+}
+
+/* ─── Content pastga tushmaydi ─── */
+.container {
+    padding-top: 50px;
+}
+
+
+/* main-section  styles */
+
+/* ─── Main container ─── */
+.main-container {
+    width: 100%;
+    min-height: 100dvh;
+    /* padding: 90px 20px 40px; */
+    display: flex;
+    align-items: center;
+}
+
+/* ─── Grid wrapper ─── */
+.main-section {
+    width: 97%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* ─── About section ─── */
+.main-section-about {
+    padding: 48px 40px;
+    border-radius: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.08);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    justify-content: center;
+}
+
+.main-section-about::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #EEEDFE;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.main-section-about::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #E1F5EE;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    background: #EEEDFE;
+    color: #3C3489;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.main-section-about h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: #1e1b4b;
+    position: relative;
+    z-index: 1;
+}
+
+.main-section-about h1 span {
+    color: #534AB7;
+}
+
+.main-section-about p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #64748b;
+    max-width: 460px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-features {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.feat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    background: #f8f9ff;
+    border: 1px solid rgba(83, 74, 183, 0.15);
+    font-size: 13px;
+    color: #534AB7;
+    font-weight: 500;
+}
+
+.about-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 13px 28px;
+    border-radius: 12px;
+    background: #534AB7;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s, transform 0.1s;
+    position: relative;
+    z-index: 1;
+}
+
+.about-cta:hover {
+    opacity: 0.85;
+}
+
+.about-cta:active {
+    transform: scale(0.98);
+}
+
+/* ─── Malumotlar section ─── */
+.main-setion-malumotlar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 500px;
+}
+
+/* ─── Form kartalar ─── */
+.income-form,
+.expense-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px;
+    background: white;
+    border-radius: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.income-form::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(22, 163, 74, 0.07);
+    pointer-events: none;
+}
+
+.expense-form::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, 0.07);
+    pointer-events: none;
+}
+
+.income-form h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #15803d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.income-form h2::before {
+    content: '↑';
+    background: rgba(22, 163, 74, 0.12);
+    color: #16a34a;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.expense-form h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #b91c1c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.expense-form h2::before {
+    content: '↓';
+    background: rgba(220, 38, 38, 0.12);
+    color: #dc2626;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.income-form input,
+.expense-form input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #1e1b4b;
+    background: #f8f9ff;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.income-form input:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+    background: white;
+}
+
+.expense-form input:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    background: white;
+}
+
+.income-form button {
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #16a34a;
+    color: white;
+    transition: opacity 0.2s, transform 0.1s;
+    position: relative;
+    z-index: 1;
+}
+
+.expense-form button {
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #dc2626;
+    color: white;
+    transition: opacity 0.2s, transform 0.1s;
+    position: relative;
+    z-index: 1;
+}
+
+.income-form button:hover,
+.expense-form button:hover {
+    opacity: 0.85;
+}
+
+.income-form button:active,
+.expense-form button:active {
+    transform: scale(0.98);
+}
+
+/* ─── Tablet ─── */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 85px 16px 32px;
+        align-items: flex-start;
+    }
+
+    .main-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .main-section-about {
+        padding: 32px 24px;
+        min-height: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-section-about h1 {
+        font-size: 32px;
+    }
+
+    .main-setion-malumotlar {
+        min-height: auto;
+    }
+}
+
+/* ─── Telefon ─── */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 80px 12px 24px;
+    }
+
+    .main-section-about {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .main-section-about h1 {
+        font-size: 26px;
+    }
+
+    .income-form,
+    .expense-form {
+        padding: 20px;
+        border-radius: 16px;
+    }
+}
