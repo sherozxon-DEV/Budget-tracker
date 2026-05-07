@@ -435,3 +435,124 @@
         border-radius: 16px;
     }
 }
+
+
+
+/* forma styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-card {
+    background: #141418;
+    border: 1px solid #2a2a35;
+    border-radius: 20px;
+    padding: 28px;
+    width: 100%;
+    max-width: 620px;
+}
+
+.form-title {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #6b6b80;
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #6b6b80;
+    margin-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+input,
+select {
+    width: 100%;
+    background: #1c1c22;
+    border: 1px solid #2a2a35;
+    border-radius: 10px;
+    color: #f0f0f5;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+}
+
+input::placeholder {
+    color: #4a4a58;
+}
+
+input:focus,
+select:focus {
+    border-color: #00e5a0;
+}
+
+.type-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.type-btn {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #2a2a35;
+    background: #1c1c22;
+    color: #6b6b80;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.type-btn.active-income {
+    background: rgba(0, 229, 160, 0.08);
+    border-color: #00e5a0;
+    color: #00e5a0;
+}
+
+.type-btn.active-expense {
+    background: rgba(255, 77, 109, 0.08);
+    border-color: #ff4d6d;
+    color: #ff4d6d;
+}
+
+.add-btn {
+    width: 100%;
+    background: #00e5a0;
+    color: #0c0c0f;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-btn:hover {
+    background: #00cc8e;
+    transform: translateY(-1px);
+}

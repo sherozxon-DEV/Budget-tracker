@@ -17,7 +17,7 @@
 
                 <div class="main-head">
                     <a href="./index.html">
-                        <h1> 📋 </h1>
+                        <h1> Budget Tracker </h1>
                     </a>
                 </div>
                 <ul class="main-list">
@@ -47,32 +47,58 @@
 
 
                 <section class="main-setion-malumotlar">
+                    <div class="form-card">
+                        <div class="form-title">// Yangi Tranzaksiya</div>
 
-                    <!-- Daromad qo'shish -->
-                    <div class="income-form">
-                        <h2>Daromad qo'shish</h2>
-                        <input type="text" placeholder="Nima uchun (ish haqi, freelance...)" />
-                        <input type="number" placeholder="Summa (so'm)" />
-                        <button>Qo'shish</button>
-                    </div>
+                        <div class="form-group">
+                            <label>Tur</label>
+                            <div class="type-toggle">
+                                <button class="type-btn active-income" id="btn-income">+ Daromad</button>
+                                <button class="type-btn" id="btn-expense">− Xarajat</button>
+                            </div>
+                        </div>
 
-                    <!-- Xarajat qo'shish -->
-                    <div class="expense-form">
-                        <h2>Xarajat qo'shish</h2>
-                        <input type="text" placeholder="Nima uchun (oziq-ovqat, transport...)" />
-                        <input type="number" placeholder="Summa (so'm)" />
-                        <button>Qo'shish</button>
-                    </div>
+                        <div class="form-row">
+                            <div>
+                                <label>Nomi</label>
+                                <input type="text" placeholder="Masalan: Maosh" />
+                            </div>
+                            <div>
+                                <label>Summa (so'm)</label>
+                                <input type="number" placeholder="0" />
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <label>Kategoriya</label>
+                            <select>
+                                <option>💼 Ish / Daromad</option>
+                                <option>🍔 Oziq-ovqat</option>
+                                <option>🚗 Transport</option>
+                                <option>📚 Ta'lim</option>
+                                <option>🎮 Ko'ngilochar</option>
+                                <option>🏥 Sog'liq</option>
+                                <option>⚽ Sport</option>
+                                <option>🥼 kiyim </option>
+                            </select>
+                        </div>
+                        <button class="add-btn">Qo'shish →</button>
                 </section>
 
             </div>
-
-        </main>
-
-        <footer></footer>
     </div>
 
+
+
+
+    </main>
+
+    <footer></footer>
+    </div>
+
+
+
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
