@@ -44,44 +44,48 @@
                 </section>
 
 
-
+                <!-- forma mlumotlari  -->
                 <section class="main-setion-malumotlar">
                     <div class="form-card">
-                        <div class="form-title">// Yangi Tranzaksiya</div>
+                        <form class="form-event">
+                            <div class="form-title">// Yangi Tranzaksiya</div>
 
-                        <div class="form-group">
-                            <label>Tur</label>
-                            <div class="type-toggle">
-                                <button class="type-btn active-income" id="btn-income">+ Daromad</button>
-                                <button class="type-btn" id="btn-expense">− Xarajat</button>
+                            <div class="form-group">
+                                <label>Tur</label>
+                                <div class="type-toggle">
+                                    <button class="type-btn active-income" id="btn-income" type="button">+
+                                        Daromad</button>
+                                    <button class="type-btn" id="btn-expense" type="button">− Xarajat</button>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-row">
-                            <div>
-                                <label>Nomi</label>
-                                <input type="text" placeholder="Masalan: Maosh" />
+                            <div class="form-row">
+                                <div>
+                                    <label>Nomi</label>
+                                    <input class="Input-maosh" type="text" placeholder="Masalan: Maosh" />
+                                </div>
+                                <div>
+                                    <label>Summa (so'm)</label>
+                                    <input class="Input-NUM" type="number" placeholder="0" />
+                                </div>
                             </div>
-                            <div>
-                                <label>Summa (so'm)</label>
-                                <input type="number" placeholder="0" />
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label>Kategoriya</label>
-                            <select>
-                                <option>💼 Ish / Daromad</option>
-                                <option>🍔 Oziq-ovqat</option>
-                                <option>🚗 Transport</option>
-                                <option>📚 Ta'lim</option>
-                                <option>🎮 Ko'ngilochar</option>
-                                <option>🏥 Sog'liq</option>
-                                <option>⚽ Sport</option>
-                                <option>🥼 kiyim </option>
-                            </select>
-                        </div>
-                        <button class="add-btn">Qo'shish →</button>
+                            <div class="form-group">
+                                <label>Kategoriya</label>
+                                <select id="kategoriya">
+                                    <option value="ish">💼 Ish / Daromad</option>
+                                    <option value="oziq-ovqat">🍔 Oziq-ovqat</option>
+                                    <option value="transport">🚗 Transport</option>
+                                    <option value="talim">📚 Ta'lim</option>
+                                    <option value="kongilochar">🎮 Ko'ngilochar</option>
+                                    <option value="soglik">🏥 Sog'liq</option>
+                                    <option value="sport">⚽ Sport</option>
+                                    <option value="kiyim">🥼 Kiyim</option>
+                                </select>
+                            </div>
+
+                            <button class="add-btn" type="submit">Qo'shish →</button>
+                        </form>
                 </section>
 
             </div>
