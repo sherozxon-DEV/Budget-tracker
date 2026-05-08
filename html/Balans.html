@@ -1,29 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/Balans.css">
     <title>Balans</title>
 </head>
 
 <body>
+
     <header class="main-header">
         <nav>
             <div class="main-head">
                 <a href="../index.html">
-                    <h1> Budget Tracker </h1>
+                    <h1>Budget Tracker</h1>
                 </a>
             </div>
             <ul class="main-list">
                 <li><a href="./Daromad.html">daromadlar</a></li>
                 <li><a href="./Xrajatlar.html">xarajatlar</a></li>
-                <li><a href="./Balans.html">balans</a></li>
+                <li><a href="./Balans.html" class="active">balans</a></li>
             </ul>
         </nav>
     </header>
 
+    <main class="balans-section">
+
+        <div class="page-title">
+            <h2>Balans</h2>
+            <p>Umumiy moliyaviy holat</p>
+        </div>
+
+        <!-- 3 ta summary -->
+        <div class="summary-grid">
+            <div class="summary-card income">
+                <span class="summary-icon">&#8593;</span>
+                <div>
+                    <p class="summary-label">Jami daromad</p>
+                    <p class="summary-value" id="total-daromad">0 so'm</p>
+                </div>
+            </div>
+            <div class="summary-card expense">
+                <span class="summary-icon">&#8595;</span>
+                <div>
+                    <p class="summary-label">Jami xarajat</p>
+                    <p class="summary-value" id="total-xarajat">0 so'm</p>
+                </div>
+            </div>
+            <div class="summary-card balance">
+                <span class="summary-icon">&#9776;</span>
+                <div>
+                    <p class="summary-label">Sof balans</p>
+                    <p class="summary-value" id="total-balans">0 so'm</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barcha tranzaksiyalar -->
+        <div class="section-label">
+            <h3>Barcha tranzaksiyalar</h3>
+        </div>
+
+        <div class="cards-grid" id="cards">
+            <div class="empty-state">
+                <p>&#128184; Hozircha ma'lumot yo'q</p>
+                <span>Daromad yoki xarajat qo'shing</span>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../js/Balans.js"></script>
 </body>
 
 </html>

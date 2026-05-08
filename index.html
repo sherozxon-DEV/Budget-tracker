@@ -1,108 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        referrerpolicy="no-referrer" />
-    <title>Budget tracker </title>
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Budget Tracker</title>
 </head>
 
 <body>
-    <div class="container">
-        <header class="main-header">
-            <nav>
-                <div class="main-head">
-                    <a href="./index.html">
-                        <h3> Budget Tracker </h3>
-                    </a>
-                </div>
-                <ul class="main-list">
-                    <li><a href="./html/Daromad.html">daromadlar</a></li>
-                    <li><a href="./html/Xrajatlar.html">xarajatlar</a></li>
-                    <li><a href="./html/Balans.html">balans</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="main-container">
-            <div class="main-section">
 
-                <section class="main-section-about">
-                    <span class="badge">Smart Finance</span>
-                    <h1>Budget <span>Tracker</span></h1>
-                    <p>Shaxsiy moliyangizni oson va qulay boshqaring.
-                        Daromad va xarajatlaringizni kuzatib boring,
-                        oylik hisobotlarni ko'ring.</p>
-                    <div class="about-features">
-                        <div class="feat-pill">Sodda interfeys</div>
-                        <div class="feat-pill">Tezkor ishlash</div>
-                        <div class="feat-pill">Har qurilmada</div>
-                    </div>
-                    <button class="about-cta">Boshlash →</button>
-                </section>
-
-
-                <!-- forma mlumotlari  -->
-                <section class="main-setion-malumotlar">
-                    <div class="form-card">
-                        <form class="form-event">
-                            <div class="form-title">// Yangi Tranzaksiya</div>
-
-                            <div class="form-group">
-                                <label>Tur</label>
-                                <div class="type-toggle">
-                                    <button class="type-btn active-income" id="btn-income" type="button">+
-                                        Daromad</button>
-                                    <button class="type-btn" id="btn-expense" type="button">− Xarajat</button>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div>
-                                    <label>Nomi</label>
-                                    <input class="Input-maosh" type="text" placeholder="Masalan: Maosh" />
-                                </div>
-                                <div>
-                                    <label>Summa (so'm)</label>
-                                    <input class="Input-NUM" type="number" placeholder="0" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Kategoriya</label>
-                                <select id="kategoriya">
-                                    <option value="ish">💼 Ish / Daromad</option>
-                                    <option value="oziq-ovqat">🍔 Oziq-ovqat</option>
-                                    <option value="transport">🚗 Transport</option>
-                                    <option value="talim">📚 Ta'lim</option>
-                                    <option value="kongilochar">🎮 Ko'ngilochar</option>
-                                    <option value="soglik">🏥 Sog'liq</option>
-                                    <option value="sport">⚽ Sport</option>
-                                    <option value="kiyim">🥼 Kiyim</option>
-                                </select>
-                            </div>
-
-                            <button class="add-btn" type="submit">Qo'shish →</button>
-                        </form>
-                </section>
-
+    <header class="main-header">
+        <nav>
+            <div class="main-head">
+                <a href="./index.html">
+                    <h3>Budget Tracker</h3>
+                </a>
             </div>
-    </div>
+            <ul class="main-list">
+                <li><a href="./html/Daromad.html">daromadlar</a></li>
+                <li><a href="./html/Xrajatlar.html">xarajatlar</a></li>
+                <li><a href="./html/Balans.html">balans</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <div class="main-section">
 
+            <!-- Chap: Hero -->
+            <div class="hero">
+                <div class="circle-lg"></div>
+                <div class="circle-sm"></div>
 
+                <span class="hero-tag">SMART FINANCE</span>
 
+                <h1>Budget <span>Tracker</span></h1>
+
+                <p>Shaxsiy moliyangizni oson va qulay boshqaring. Daromad va xarajatlaringizni kuzatib boring, oylik
+                    hisobotlarni ko'ring.</p>
+
+                <div class="hero-tags">
+                    <span>Sodda interfeys</span>
+                    <span>Tezkor ishlash</span>
+                    <span>Har qurilmada</span>
+                </div>
+
+                <a href="./html/Balans.html" class="hero-btn">Boshlash →</a>
+            </div>
+
+            <!-- O'ng: Form -->
+            <div class="form-card">
+                <p class="form-card-title">// YANGI TRANZAKSIYA</p>
+
+                <div class="type-buttons">
+                    <button class="type-btn active-income" id="btn-income">+ Daromad</button>
+                    <button class="type-btn" id="btn-expense">− Xarajat</button>
+                </div>
+
+                <form class="form-event" id="form-event">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nomi</label>
+                            <input class="Input-maosh" type="text" placeholder="Masalan: Maosh">
+                        </div>
+                        <div class="form-group">
+                            <label>Summa (so'm)</label>
+                            <input class="Input-NUM" type="number" placeholder="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kategoriya</label>
+                        <select id="kategoriya">
+                            <option value="Ish">💼 Ish / Daromad</option>
+                            <option value="Talim">📚 Ta'lim</option>
+                            <option value="Oziq-ovqat">🛒 Oziq-ovqat</option>
+                            <option value="Transport">🚗 Transport</option>
+                            <option value="Kommunal">💡 Kommunal</option>
+                            <option value="Freelance">💻 Freelance</option>
+                            <option value="Bonus">🎁 Bonus</option>
+                            <option value="Boshqa">📌 Boshqa</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Qo'shish →</button>
+                </form>
+            </div>
+
+        </div>
     </main>
 
-    <footer></footer>
-    </div>
-
-
-
     <script src="./js/index.js"></script>
-    <script src="./js/Daromad.js"></script>
 </body>
 
 </html>
