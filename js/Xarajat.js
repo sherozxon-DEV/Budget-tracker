@@ -1,9 +1,5 @@
-
-const BUDGET_X = JSON.parse(localStorage.getItem('finance')) || [];
-
-const Xarajatlar = BUDGET_X.filter(e => e.type === 'Xarajat');
-
-
+let BUDGET_X = JSON.parse(localStorage.getItem('finance')) || [];
+let Xarajatlar = BUDGET_X.filter(e => e.type === 'Xarajat');
 
 function formatSum(num) {
     return Number(num).toLocaleString('uz-UZ') + " so'm";
@@ -20,6 +16,20 @@ function getIcon(kat) {
         if (k.includes(key)) return ICONS[key];
     }
     return ICONS.default;
+}
+
+function deleteItem(i) {
+    let data = JSON.parse(localStorage.getItem('finance')) || [];
+    const Xarajatlar = data.filter(e => e.type === 'Xarajat');
+
+    // O'chiriladigan elementni topamiz
+    const targetItem = Xarajatlar[i];
+
+    // Butun data dan shu elementni olib tashlaymiz
+    data = data.filter(e => e !== targetItem);
+
+    localStorage.setItem('finance', JSON.stringify(data));
+    location.reload();
 }
 
 function renderSummary() {
@@ -51,6 +61,8 @@ function renderCards() {
                 <span class="card-kategory">${item.kategory}</span>
                 <span class="card-maosh">${item.maosh}</span>
             </div>
+        
+<button onclick="deleteItem(${i})" class="X-btn">🗑</button>
         </div>
     `).join('');
 }

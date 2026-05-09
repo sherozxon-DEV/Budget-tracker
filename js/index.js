@@ -25,17 +25,6 @@ const setLocal = () => {
     localStorage.setItem('finance', JSON.stringify(BUDGET)); // BUDGET qo'shildi
 }
 
-// get local
-// const getlocal = () => {
-//     const data = JSON.parse(localStorage.getItem('finance')) || [];
-//     return data
-
-// }
-
-
-console.log(BUDGET);
-
-
 formEvent.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -51,9 +40,5 @@ formEvent.addEventListener('submit', (e) => {
     BUDGET.push(OBJ);
 
     setLocal(); // ✅ Submit bo'lganda LocalStorage ga saqlaydi
-
     formEvent.reset();
-
-    console.log(OBJ);
-    console.log(BUDGET);
 });

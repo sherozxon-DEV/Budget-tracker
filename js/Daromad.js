@@ -49,6 +49,7 @@ function renderCards() {
                 <span class="card-kategory">${item.kategory}</span>
                 <span class="card-maosh">${item.maosh}</span>
             </div>
+            <button class="X-btn"> 🗑</button>
         </div>
     `).join('');
 }
