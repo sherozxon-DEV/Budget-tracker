@@ -1,16 +1,6 @@
 const BUDGET_B = JSON.parse(localStorage.getItem('finance')) || [];
 
-// Demo data
-if (!BUDGET_B.length) {
-    BUDGET_B.push(
-        { type: "Daromad", kategory: "ish", maosh: "oylik", num: "5000000" },
-        { type: "Daromad", kategory: "freelance", maosh: "loyiha", num: "2500000" },
-        { type: "Xarajat", kategory: "oziq-ovqat", maosh: "kunlik", num: "300000" },
-        { type: "Xarajat", kategory: "transport", maosh: "oylik", num: "200000" },
-        { type: "Daromad", kategory: "bonus", maosh: "yillik", num: "1000000" },
-        { type: "Xarajat", kategory: "kommunal", maosh: "oylik", num: "500000" },
-    );
-}
+
 
 function formatSum(num) {
     return Number(num).toLocaleString('uz-UZ') + " so'm";
@@ -28,6 +18,13 @@ function getIcon(kat) {
         if (k.includes(key)) return ICONS[key];
     }
     return ICONS.default;
+}
+
+function deleteItem(i) {
+    let data = JSON.parse(localStorage.getItem('finance')) || [];
+    data.splice(i, 1);
+    localStorage.setItem('finance', JSON.stringify(data));
+    location.reload();
 }
 
 function renderSummary() {
@@ -75,6 +72,7 @@ function renderCards() {
                 <span class="card-kategory">${item.kategory}</span>
                 <span class="card-maosh">${item.maosh}</span>
             </div>
+            <button onclick="deleteItem(${i})" class="X-btn">🗑</button>
         </div>`;
     }).join('');
 }

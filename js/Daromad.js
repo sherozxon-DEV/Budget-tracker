@@ -20,6 +20,16 @@ function getIcon(kat) {
     return ICONS.default;
 }
 
+
+function deleteItem(i) {
+    let data = JSON.parse(localStorage.getItem('finance')) || [];
+    const Daromadlar = data.filter(e => e.type === 'Daromad');
+    const targetItem = Daromadlar[i];
+    data = data.filter(e => e !== targetItem);
+    localStorage.setItem('finance', JSON.stringify(data));
+    location.reload();
+}
+
 function renderSummary() {
     let total = 0;
     DAROMADLAR.forEach(item => total += Number(item.num) || 0);
@@ -49,7 +59,7 @@ function renderCards() {
                 <span class="card-kategory">${item.kategory}</span>
                 <span class="card-maosh">${item.maosh}</span>
             </div>
-            <button class="X-btn"> 🗑</button>
+        <button onclick="deleteItem(${i})" class="X-btn">🗑</button>
         </div>
     `).join('');
 }
